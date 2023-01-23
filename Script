@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+
+// Class for a weather app
+class WeatherApp {
+public:
+    // Function to get the current temperature for a given location
+    int getCurrentTemperature(std::string location) {
+        // Call an API to get the current temperature for the location
+        // ...
+        return temperature;
+    }
+
+    // Function to get the forecast for a given location
+    std::string getForecast(std::string location) {
+        // Call an API to get the forecast for the location
+        // ...
+        return forecast;
+    }
+};
+
+int main() {
+    // Create a weather app
+    WeatherApp weatherApp;
+
+    // Get the location from the user
+    std::string location;
+    std::cout << "Enter a location: ";
+    std::cin >> location;
+
+    // Get the current temperature for the location
+    int temperature = weatherApp.getCurrentTemperature(location);
+    std::cout << "The current temperature is: " << temperature << "F" << std::endl;
+
+    // Get the forecast for the location
+    std::string forecast = weatherApp.getForecast(location);
+    std::cout << "The forecast is: " << forecast << std::endl;
+
+    return 0;
+}
